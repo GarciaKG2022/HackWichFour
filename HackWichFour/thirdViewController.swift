@@ -1,5 +1,5 @@
 //
-//  secondViewController.swift
+//  thirdViewController.swift
 //  HackWichFour
 //
 //  Created by Kevin Garcia on 2/16/22.
@@ -7,17 +7,19 @@
 
 import UIKit
 
-class secondViewController: UIViewController {
+class thirdViewController: UIViewController {
+
     
-    @IBOutlet var secondTabLabel: UILabel!
+    @IBOutlet var thirdTabLabel: UILabel!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.secondTabLabel.text = "My Classes"
+        self.thirdTabLabel.text = "My Favorite Foods"
+        
+        
         
     }
     

@@ -36,21 +36,27 @@
             </objects>
             <point key="canvasLocation" x="868.11594202898561" y="36.830357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="QGo-Gk-OuD">
             <objects>
-                <viewController id="aCX-aJ-K3d" customClass="ViewController" customModule="HackWichFour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aCX-aJ-K3d" customClass="thirdViewController" customModule="HackWichFour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Db-ob-WSA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-8H-bIc">
-                                <rect key="frame" x="121" y="88" width="152" height="116"/>
+                                <rect key="frame" x="131" y="222" width="152" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRT-Tc-wwR">
+                                <rect key="frame" x="97" y="522" width="220" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kfM-L3-bJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,11 +64,12 @@
                     <navigationItem key="navigationItem" id="w6v-LS-yQb"/>
                     <connections>
                         <outlet property="firstTabLabel" destination="sVv-8H-bIc" id="AZn-9n-NMV"/>
+                        <outlet property="thirdTabLabel" destination="sVv-8H-bIc" id="v8J-Gv-eCp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tF-aB-TkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.11594202898561" y="-639.50892857142856"/>
+            <point key="canvasLocation" x="1778.2608695652175" y="-639.50892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KK1-16-4Zm">
@@ -94,18 +101,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aCX-aJ-K3d" kind="relationship" relationship="rootViewController" id="aYt-LT-PQF"/>
+                        <segue destination="K3w-LZ-bVM" kind="relationship" relationship="rootViewController" id="aYt-LT-PQF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpP-Pu-qzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42.028985507246382" y="-639.50892857142856"/>
         </scene>
-        <!--Item 2-->
+        <!--My Favorite Food-->
         <scene sceneID="Sd0-6T-8Li">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbb-6V-Pnv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4gB-bj-Qn4"/>
+                    <tabBarItem key="tabBarItem" title="My Favorite Food" image="heart.fill" catalog="system" id="4gB-bj-Qn4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tdm-gy-SYz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -120,8 +127,28 @@
             </objects>
             <point key="canvasLocation" x="-42.028985507246382" y="36.830357142857139"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uiJ-m8-yIj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K3w-LZ-bVM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PDR-F9-Iy7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AaS-eP-1SG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aCX-aJ-K3d" kind="relationship" relationship="rootViewController" id="6aD-3y-ZOY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVv-zc-85L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868.11594202898561" y="-639.50892857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
